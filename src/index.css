@@ -2,41 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* LIQUID CONFIDENCE ARCHITECTURE - Premium Design System
+   Transforms language anxiety into confidence euphoria through sophisticated visual psychology
+   All colors MUST be HSL for perfect gradient control and personality adaptation
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* === CONFIDENT SOPHISTICATION PALETTE === */
+    
+    /* Core Brand Colors - Deep Intelligence */
+    --primary: 222 84% 5%;              /* Deep Sapphire - Authority, Trust, Intelligence */
+    --primary-foreground: 46 95% 90%;   /* Warm Champagne - Success, Achievement */
+    --primary-glow: 222 84% 25%;        /* Sapphire glow for interactions */
+    
+    /* Success & Growth Colors */
+    --secondary: 46 95% 90%;             /* Warm Champagne - Success, Warmth */
+    --secondary-foreground: 222 84% 5%;
+    --success: 159 84% 39%;              /* Electric Mint - Growth, Progress, Vitality */
+    --success-foreground: 0 0% 100%;
+    --success-glow: 159 84% 65%;         /* Mint glow for celebrations */
+    
+    /* Premium Interface Colors */
+    --background: 220 20% 98%;           /* Pearl Whisper - Clarity, Space, Elegance */
+    --foreground: 222 84% 5%;            /* Deep text */
+    --card: 0 0% 100%;                   /* Pure white cards */
+    --card-foreground: 222 84% 5%;
+    --card-glass: 220 20% 98% / 0.8;     /* Frosted glass effect */
+    
+    /* Gentle Interaction Colors */
+    --muted: 220 20% 96%;
+    --muted-foreground: 222 20% 40%;
+    --accent: 159 84% 39%;               /* Electric Mint accents */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Supportive Interface */
+    --border: 220 20% 90%;               /* Soft borders */
+    --input: 220 20% 96%;                /* Input backgrounds */
+    --ring: 159 84% 39%;                 /* Focus rings in electric mint */
+    --destructive: 0 84% 67%;            /* Coral Sunset - Gentle, non-threatening */
+    --destructive-foreground: 0 0% 100%;
+    
+    /* === PREMIUM GRADIENTS === */
+    --gradient-primary: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 15%));
+    --gradient-success: linear-gradient(135deg, hsl(159 84% 39%), hsl(159 84% 55%));
+    --gradient-champagne: linear-gradient(135deg, hsl(46 95% 90%), hsl(46 95% 85%));
+    --gradient-glass: linear-gradient(145deg, hsl(220 20% 98% / 0.9), hsl(220 20% 96% / 0.7));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%), hsl(159 84% 39%));
+    
+    /* === AI PERSONALITY GRADIENTS === */
+    --gradient-friend: linear-gradient(135deg, hsl(25 95% 75%), hsl(15 95% 65%));      /* Sunset amber to rose gold */
+    --gradient-professional: linear-gradient(135deg, hsl(222 84% 15%), hsl(220 30% 70%)); /* Sapphire to platinum */
+    --gradient-coach: linear-gradient(135deg, hsl(159 84% 39%), hsl(180 84% 45%));     /* Electric mint to cyan */
+    
+    /* === PREMIUM SHADOWS === */
+    --shadow-elegant: 0 10px 30px -10px hsl(222 84% 5% / 0.15);
+    --shadow-glass: 0 8px 32px hsl(222 84% 5% / 0.12);
+    --shadow-glow: 0 0 40px hsl(159 84% 39% / 0.3);
+    --shadow-celebration: 0 0 60px hsl(46 95% 70% / 0.4);
+    
+    /* === PREMIUM ANIMATIONS === */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Design System */
+    --radius: 16px;                      /* Premium rounded corners */
+    --radius-sm: 8px;
+    --radius-lg: 24px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +89,56 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* === SOPHISTICATED DARK MODE === */
+    
+    /* Core Dark Palette - Luxury Night Mode */
+    --primary: 46 95% 85%;               /* Champagne becomes primary in dark */
+    --primary-foreground: 222 84% 5%;
+    --primary-glow: 46 95% 70%;
+    
+    --secondary: 222 30% 15%;            /* Dark sophisticated cards */
+    --secondary-foreground: 46 95% 85%;
+    --success: 159 70% 45%;              /* Softer mint in dark */
+    --success-foreground: 222 84% 5%;
+    --success-glow: 159 70% 60%;
+    
+    /* Dark Interface */
+    --background: 222 84% 3%;            /* Deep sapphire background */
+    --foreground: 46 95% 90%;            /* Champagne text */
+    --card: 222 30% 8%;                  /* Dark glass cards */
+    --card-foreground: 46 95% 85%;
+    --card-glass: 222 30% 8% / 0.9;
+    
+    /* Dark Interactions */
+    --muted: 222 30% 12%;
+    --muted-foreground: 220 20% 60%;
+    --accent: 159 70% 45%;
+    --accent-foreground: 222 84% 5%;
+    
+    /* Dark Interface Elements */
+    --border: 222 30% 20%;
+    --input: 222 30% 12%;
+    --ring: 159 70% 45%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 46 95% 95%;
+    
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(222 84% 3%), hsl(222 84% 8%));
+    --gradient-success: linear-gradient(135deg, hsl(159 70% 35%), hsl(159 70% 50%));
+    --gradient-champagne: linear-gradient(135deg, hsl(46 95% 75%), hsl(46 95% 65%));
+    --gradient-glass: linear-gradient(145deg, hsl(222 30% 8% / 0.95), hsl(222 30% 12% / 0.8));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%), hsl(159 70% 25%));
+    
+    /* Dark AI Personalities */
+    --gradient-friend: linear-gradient(135deg, hsl(25 85% 65%), hsl(15 85% 55%));
+    --gradient-professional: linear-gradient(135deg, hsl(222 50% 25%), hsl(220 30% 40%));
+    --gradient-coach: linear-gradient(135deg, hsl(159 70% 35%), hsl(180 70% 40%));
+    
+    /* Dark Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(222 84% 0% / 0.4);
+    --shadow-glass: 0 8px 32px hsl(222 84% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(159 70% 35% / 0.4);
+    --shadow-celebration: 0 0 60px hsl(46 95% 60% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -94,12 +150,168 @@ All colors MUST be HSL.
   }
 }
 
+/* === PREMIUM ANIMATION KEYFRAMES === */
+@keyframes liquid-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-4px) scale(1.02); }
+}
+
+@keyframes confidence-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 hsla(var(--success) / 0.7);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 0 8px hsla(var(--success) / 0);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes celebration-burst {
+  0% { 
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  50% { 
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  100% { 
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes avatar-breathe {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes glass-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes progress-flow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+/* === PREMIUM COMPONENT STYLES === */
+@layer components {
+  /* Glass Morphism Cards */
+  .glass-card {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsla(var(--border) / 0.2);
+    box-shadow: var(--shadow-glass);
+    transition: var(--transition-smooth);
+  }
+  
+  .glass-card:hover {
+    box-shadow: var(--shadow-elegant);
+    transform: translateY(-2px);
+  }
+
+  /* Premium Button Utilities */
+  .btn-celebration {
+    animation: celebration-burst 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* AI Avatar Styles */
+  .avatar-friend {
+    background: var(--gradient-friend);
+    animation: avatar-breathe 3s ease-in-out infinite;
+  }
+  
+  .avatar-professional {
+    background: var(--gradient-professional);
+    animation: liquid-float 4s ease-in-out infinite;
+  }
+  
+  .avatar-coach {
+    background: var(--gradient-coach);
+    animation: confidence-pulse 2s ease-in-out infinite;
+  }
+
+  /* Interactive Elements */
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transition: var(--transition-smooth);
+  }
+  
+  .magnetic-hover {
+    transition: var(--transition-bounce);
+  }
+  
+  .magnetic-hover:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  /* Progress Animations */
+  .progress-bar {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsla(var(--success) / 0.4), 
+      transparent
+    );
+    animation: progress-flow 2s ease-in-out infinite;
+  }
+
+  /* Premium Typography */
+  .text-hero {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  
+  .text-celebration {
+    background: var(--gradient-champagne);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+  }
+  
+  /* Smooth scrolling for premium feel */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Premium focus styles */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }
